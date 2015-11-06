@@ -27,7 +27,7 @@ Limit your lines to 80 characters. This is to maintain human readability, and to
 
 ### 2 Space Indentations
 
-To improve human readability you should use spaces to indent your code. Different editors display tabs differently, and using tabs requires you to know what the indentation of a tab is going to look like, and require it to always be consistent. Therefore we will not use tabs. 2 spaces is prefered because it is quicker and leaves code more compressed horizontally. It is also very similar to the old days of using 2 spaces after a period, so that's neat. 
+To improve human readability you should use spaces to indent your code. Different editors display tabs differently, and using tabs requires you to know what the indentation of a tab is going to look like, and require it to always be consistent. Therefore we will not use tabs. 2 spaces is preferred because it is quicker and leaves code more compressed horizontally. It is also very similar to the old days of using 2 spaces after a period, so that's neat. 
 
 Save time and configure your editor to insert 2 spaces when you press the tab button to save you from having to press the space bar twice. Also configure auto indenting to use 2 spaces, and then you can adjust code quickly.
 
@@ -72,7 +72,7 @@ var fn = function () {
 })();
 ```
 
-Blocks do not require semicolons.
+Block statements (the keywords `do`, `for`, `if`, `else`, `switch`, `case`, `try`, `catch`, `void`, `while`, `with`, and `function`) do not require semicolons.
 
 Valid
 
@@ -93,7 +93,7 @@ if (x) {
 
 ### Curly Braces
 
-Not using curly braces can lead to errors. Block statements should have braces. Curly braces must also start on the same line as the statement to avoid undefined errors. If you must split parameters onto new lines, use four spaces and keep curly braces on the same line as the final parameter.
+Not using curly braces can lead to errors. Block statements (the keywords `do`, `for`, `if`, `else`, `switch`, `case`, `try`, `catch`, `void`, `while`, `with`, and `function`) should have braces. Curly braces must also start on the same line as the statement to avoid undefined errors. If you must split parameters onto new lines, use four spaces and keep curly braces on the same line as the final parameter.
 
 Valid
 
@@ -204,7 +204,7 @@ for (i = 0, j = arr.length; i < j; i++) {}
 
 ### Spaces
 
-Always put a single space after the keywords `do`, `for`, `if`, `else`, `switch`, `case`, `try`, `catch`, `void`, `while`, `with`, `return`, `typeof`, and `function`. Binary operators (`=`, `,`, `+`, `-`, `/`, `*`, `==`, `===`, `!=`, `!==`, etc.) should also be surrounded with spaces.  In addition, put space before and after the `?` or `:` in conditional expressions.
+Always put a single space after block statements (the keywords `do`, `for`, `if`, `else`, `switch`, `case`, `try`, `catch`, `void`, `while`, `with`, and `function`). Binary operators (`=`, `,`, `+`, `-`, `/`, `*`, `==`, `===`, `!=`, `!==`, etc.) should also be surrounded with spaces.  In addition, put space before and after the `?` or `:` in conditional expressions.
 
 The opening/closing braces and curly braces after keywords, block statements, and literal objects should also have spacing.
 
@@ -280,7 +280,7 @@ var x = {a : 1};
 
 ### Line breaks
 
-There is no need for multiple line breaks. Also, don't put line breaks after block statements.
+There is no need for multiple line breaks. Also, don't put line breaks after block statements (the keywords `do`, `for`, `if`, `else`, `switch`, `case`, `try`, `catch`, `void`, `while`, `with`, and `function`).
 
 Valid
 ```
@@ -324,7 +324,7 @@ const MY_OBJECT = { key: "value"};
 
 ### Variables
 
-All public variables should be camelcase. The leading character is lowercase, and all other words should be capitalized. If a variable is private, start it with an underscore. Trailing underscores are acceptable.
+All public variables should be camelCase. The leading character is lowercase, and all other words should be capitalized. If a variable is private, start it with an underscore. Trailing underscores are acceptable.
 
 
 Valid
@@ -400,7 +400,7 @@ Valid
 
 ```
 function (paramOne, paramTwo,
-  paramthree) {
+  paramThree) {
     x++;
 }
 ```
@@ -409,7 +409,7 @@ Invalid
 
 ```
 function (paramOne,paramTwo,
-paramthree) {
+paramThree) {
   x++;
 }
 ```
@@ -437,7 +437,7 @@ var a = b['c'];
 
 ### Do Not Use with.
 
-Use of the with statement is not recommended, as it may be the source of confusing bugs and compatibility issues.
+Use of the `with` statement is not recommended, as it may be the source of confusing bugs and compatibility issues.
 
 Invalid
 
