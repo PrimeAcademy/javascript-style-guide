@@ -1,6 +1,22 @@
 # javascript-style-guide
 
 
+## What is a style guide
+
+A style guide is a set of *standards* to be followed during the writing and designing of code. The implementation of a style guide provides uniformity in code style and formatting. Style guides typically cover guidelines regarding indentation (tabs vs. spaces), variable naming conventions, where best to apply whitespace, and so on.
+
+## Why use a style guide
+
+When you write code you have to think about who will be using it and maintaining it. This most likely will not always be you, and this is especially true if you're working in a team. 
+
+Following a style guide helps improve the overall quality of the code you write. This will help facilitate other developers with maintenance and will save time when making changes, adding new features or just when reading it over (code intake).
+
+Readable source code is easier for us to understand as well. It's easier to browse, locate and fix bugs in and more easy to optimize. It can also give us a clearer picture of how the code fits into a larger body of work. 
+
+Being consistent will reduce lead time required to understand your code, and if created in a team, will look like one person wrote it. This clarifies how changes and updates to an implementation should be styled or structured.
+
+## About this style guide
+
 This is a guide for writing consistent and aesthetically pleasing JavaScript code. It is inspired by Google's style-guides that they use for open source projects, along with some logical reasoning. 
 
 There is a .jscsrc file which enforces these rules as closely as possible. You can either use that and adjust it, or use this script to make your own. You can install JSCS via NPM using `npm install jscs -g`. There are also a large number of plug-ins available for use in your favorite editor or task manager.
@@ -446,3 +462,7 @@ with (x) {
   prop++;
 }
 ```
+
+## jsDocs
+
+*Coming soon*
