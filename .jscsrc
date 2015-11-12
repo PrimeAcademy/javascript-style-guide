@@ -22,7 +22,7 @@
   "disallowKeywordsOnNewLine": [
     "else"
   ],
-  "requireSpaceAfterKeywords": true,
+  "requireSpaceAfterKeywords": false,
   "requireSpaceBeforeBinaryOperators": true,
   "requireSpaceAfterBinaryOperators": true,
   "requireSpacesInConditionalExpression": true,
