@@ -47,6 +47,8 @@ Open Atom and go to preferences by pressing `cmd + ,`. Click on `install` and se
 
 ![Installing](https://github.com/PrimeAcademy/javascript-style-guide/blob/master/screencap1.gif)
 
+Once you have it installed, you can copy the `.jscsrc` file from this repository into the root of your project and the style guide will be read in automatically.
+
 ## Formatting
 
 ### 80 Character Line Limit
@@ -64,14 +66,14 @@ Save time and configure your editor to insert 2 spaces when you press the tab bu
 Even though semicolons are technically optional in JavaScript, it is important that you use them. Interpreters can make mistakes without them.
 
 Valid
-```
+```javascript
 var a = 1;
 var fn = function () {
     //...
 };
 ```
 Invalid
-```
+```javascript
 var a = 1
 var fn = function () {
     //...
@@ -79,7 +81,7 @@ var fn = function () {
 ```
 
 Example:
-```
+```javascript
 // define a function
 var fn = function () {
     //...
@@ -92,7 +94,7 @@ var fn = function () {
 ```
 
 This will be interpreted as:
-```
+```javascript
 var fn = function () {
     //...
 }(function () {
@@ -104,7 +106,7 @@ Block statements (the keywords `do`, `for`, `if`, `else`, `switch`, `case`, `try
 
 Valid
 
-```
+```javascript
 if (x) {
   x++;
 }
@@ -112,7 +114,7 @@ if (x) {
 
 Invalid
 
-```
+```javascript
 if (x) {
   x++;
 };
@@ -125,7 +127,7 @@ Not using curly braces can lead to errors. Block statements (the keywords `do`, 
 
 Valid
 
-```
+```javascript
 if (x) {
   x++;
 }
@@ -133,13 +135,13 @@ if (x) {
 
 Invalid
 
-```
+```javascript
 if (x) x++;
 ```
 
 Invalid
 
-```
+```javascript
 if (x)
 {
   x++;
@@ -151,7 +153,7 @@ if (x)
 When writing `if` statements, `else` must be on the same line as the ending curly brace of the `if`.
 
 Valid
-```
+```javascript
 if (x < 0) {
   x++;
 } else {
@@ -160,7 +162,7 @@ if (x < 0) {
 ```
 
 Invalid
-```
+```javascript
 if (x < 0) {
   x++;
 }
@@ -174,15 +176,15 @@ else {
 Always use single quotes except when using JSON. JSON strings must be double quoted.
 
 Valid
-```
+```javascript
 var x = 'x';
 ```
 Invalid
-```
+```javascript
 var x = "x";
 ```
 Valid
-```
+```javascript
 var jsonString = '{"key1":"value1"}';
 ```
 
@@ -191,13 +193,13 @@ var jsonString = '{"key1":"value1"}';
 Use single quotes to create strings. If you need to break a string into multiple lines, use `+` to concatenate.
 
 Valid
-```
+```javascript
 var x = 'multi' +
     'line';
 var y = 'single line';
 ```
 Invalid
-```
+```javascript
 var x = "multi \
     line";
 ```
@@ -211,7 +213,7 @@ Remove all trailing whitespace. Programmers who have gotten fast will use the `e
 Always use `var` when declaring variables. When a comma is forgotten, JavaScript will add a semicolon, thus elevating a var-less property to the global scope. This may have unintended consequences, so just don't do it.
 
 Valid
-```
+```javascript
 var a = require('a');
 var b = require('b');
 var x = 1;
@@ -221,7 +223,7 @@ for (var i = 0, var j = arr.length; i < j; i++) {}
 
 Invalid
 
-```
+```javascript
 var a = require('a'),
   b = require('b');
 var x = 1,
@@ -237,7 +239,7 @@ Always put a single space after block statements (the keywords `do`, `for`, `if`
 The opening/closing braces and curly braces after keywords, block statements, and literal objects should also have spacing.
 
 Valid
-```
+```javascript
 if (x) {
     x++;
 }
@@ -246,7 +248,7 @@ var a = b ? c : d;
 ```
 
 Invalid
-```
+```javascript
 if(x) {
     x++;
 }
@@ -266,7 +268,7 @@ var a = b ? c :d;
 Object and Array brackets, parenthesis, and line breaks should not contain spaces.  Braces that belong to a function should not have a spaces. Likewise, when you call and expression, do not use spaces.
 
 Valid
-```
+```javascript
 var x = {a: {b: 1}};
 var x = [[1]];
 var x = (1 + 2) * 3;
@@ -276,7 +278,7 @@ foo();
 ```
 
 Invalid
-```
+```javascript
 var x = { a: { b: 1 } };
 var x = [ [ 1 ] ];
 var x = ( 1 + 2 );
@@ -288,7 +290,7 @@ foo ();
 In addition, there should be no space after object keys, but before their values.
 
 Valid
-```
+```javascript
 var y = {
     a: 1,
     b: 2
@@ -297,7 +299,7 @@ var x = {a: 1};
 ```
 
 Invalid
-```
+```javascript
 var y = {
     a:1,
     b :2
@@ -311,7 +313,7 @@ var x = {a : 1};
 There is no need for multiple line breaks. Also, don't put line breaks after block statements (the keywords `do`, `for`, `if`, `else`, `switch`, `case`, `try`, `catch`, `void`, `while`, `with`, and `function`).
 
 Valid
-```
+```javascript
 x++;
 
 if (cond){
@@ -320,7 +322,7 @@ if (cond){
 ```
 
 Invalid
-```
+```javascript
 x++;
 
 
@@ -337,16 +339,16 @@ if (cond)
 Constants should always be in uppercase, and use underscores to separate out words. If you're using ECMA6 you should also use the `const` keyword. Do not use object properties as constants, only use primitives. JavaScript will not protect your properties from being overwritten.
 
 Valid
-```
+```javascript
 const MAX_NUMBER_OF_ATTEMPTS = 5;
 ```
 
 Invalid
-```
+```javascript
 const maxNumberOfAttempts = 5;
 ```
 Invalid
-```
+```javascript
 const MY_OBJECT = { key: "value"};
 ```
 
@@ -356,7 +358,7 @@ All public variables should be camelCase. The leading character is lowercase, an
 
 
 Valid
-```
+```javascript
 var camelCase = 0;
 var CamelCase = 1;
 var _camelCase = 2;
@@ -364,7 +366,7 @@ var camelCase_ = 3;
 ```
 
 Invalid
-```
+```javascript
 var lower_case = 1;
 var Mixed_case = 2;
 var mixed_Case = 3;
@@ -375,12 +377,12 @@ var mixed_Case = 3;
 Constructors should always be capitalized.
 
 Valid
-```
+```javascript
 var a = new Car();
 ```
 
 Invalid
-```
+```javascript
 var a = new car();
 ```
 
@@ -390,7 +392,7 @@ var a = new car();
 
 Valid
 
-```
+```javascript
 x = y ? 1 : 2;
 x = y ?
   1 : 2;
@@ -398,7 +400,7 @@ x = y ?
 
 Invalid
 
-```
+```javascript
 x = y
   ? 1 : 2;
 ```
@@ -407,12 +409,12 @@ x = y
 Unary operators should be "stuck to the right". There should not be a space between the unary operators and the variables on which they're being used.
 
 Valid
-```
+```javascript
 x = !y; y = ++z;
 ```
 
 Invalid
-```
+```javascript
 x = ! y; y = ++ z;
 ```
 
@@ -426,7 +428,7 @@ If you have to write parameters on separate lines, use two spaces to indent them
 
 Valid
 
-```
+```javascript
 function (paramOne, paramTwo,
   paramThree) {
     x++;
@@ -435,7 +437,7 @@ function (paramOne, paramTwo,
 
 Invalid
 
-```
+```javascript
 function (paramOne,paramTwo,
 paramThree) {
   x++;
@@ -447,7 +449,7 @@ paramThree) {
 ### Always use dot notation, when possible.
 
 Valid
-```
+```javascript
 var a = b.c;
 var a = b[c];
 var a = b[c.d];
@@ -456,7 +458,7 @@ var a = b.while; // reserved words can be property names in ES5
 ```
 
 Invalid
-```
+```javascript
 var a = b['c'];
 ```
 
@@ -469,7 +471,7 @@ Use of the `with` statement is not recommended, as it may be the source of confu
 
 Invalid
 
-```
+```javascript
 with (x) {
   prop++;
 }
