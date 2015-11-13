@@ -45,7 +45,7 @@ Here is a tutorial for installing the Atom plug-in, and some examples of usage.
 
 Open Atom and go to preferences by pressing `cmd + ,`. Click on `install` and search for `linter-jscs`.  Install the package. Here is a gif of the process:
 
-![Installing](https://github.com/PrimeAcademy/javascript-style-guide/master/screencap1.gif)
+![Installing](https://github.com/PrimeAcademy/javascript-style-guide/blob/master/screencap1.gif)
 
 ## Formatting
 
