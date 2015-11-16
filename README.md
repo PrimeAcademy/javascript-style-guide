@@ -477,6 +477,58 @@ with (x) {
 }
 ```
 
-## jsDocs
+## JSDocs
 
-*Coming soon*
+JSDoc is an API documentation generator for JavaScript, similar to JavaDoc or PHPDoc. The purpose is to document the API of your JavaScript application or library. You add documentation comments directly to your source code, right along side the code itself. The JSDoc Tool will scan your source code, and generate a complete HTML documentation website for you.
+
+Our style guide adheres to the Closure Compiler's annotation style. The Closure Compiler looks for type information in JSDoc tags. Because JavaScript has no way to declare types, the Closure Compiler can use data type information about JavaScript variables to provide enhanced optimization and warnings. Because JavaScript has no syntax for declaring the type of a variable, you must use comments in the code to specify the data type.
+
+>The following is taken from [Getting Started with JSDoc 3](http://usejsdoc.org/about-getting-started.html) and adheres to the Creative Commons Attribution-ShareAlike 3.0 License.
+
+### Commenting your code
+
+JSDoc comments should be placed immediately before the code being documented. It must start with a `/**` sequence in order to be recognized by the JSDoc parser. Comments beginning with `/*`, `/***`, or more than 3 stars will be ignored. This is a feature to allow you to suppress parsing of comment blocks. In addition, inline comments `//` are ignored.
+
+### Description
+
+The simplest documentation is just a description.
+
+```JavaScript
+/** This is a description of the foo function. */
+function foo() {
+}
+```
+
+### Documentation Tags
+
+Special Documentation Tags can be added to your descriptions to give more information.
+
+For instance, use the `@constructor` tag to decorate a function as a constructor.
+
+```JavaScript
+/**
+ * Represents a book.
+ * @constructor
+ */
+function Book(title, author) {
+}
+```
+
+You should also describe input parameters using the `@param` tag.
+
+```JavaScript
+/**
+ * Represents a book.
+ * @constructor
+ * @param {string} title - The title of the book.
+ * @param {string} author - The author of the book.
+ */
+function Book(title, author) {
+}
+```
+
+See a full list of tags at the [JSDocs website](http://usejsdoc.org/).
+
+###  Closure Compiler Tags
+
+Please read [Annotating JavaScript for the Closure Compiler](https://developers.google.com/closure/compiler/docs/js-for-compiler?hl=en) for more information on JSDocs tags that affect on the behavior of the Closure Compiler, Type Expressions, and Generic Types.
