@@ -354,7 +354,7 @@ const MY_OBJECT = { key: "value"};
 
 ### Variables
 
-All public variables should be camelCase. The leading character is lowercase, and all other words should be capitalized. If a variable is private, start it with an underscore. Trailing underscores are acceptable.
+All public variables should be camel case. The leading character is lowercase, and all other words should be capitalized. If a variable is private, start it with an underscore. Trailing underscores are acceptable.
 
 
 Valid
