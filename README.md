@@ -47,7 +47,9 @@ Open Atom and go to preferences by pressing `cmd + ,`. Click on `install` and se
 
 ![Installing](https://github.com/PrimeAcademy/javascript-style-guide/blob/master/screencap1.gif)
 
-Once you have it installed, you can copy the `.jscsrc` file from this repository into the root of your project and the style guide will be read in automatically.
+Once you have it installed, you can copy the `.jscsrc` file from this repository into the root of your project and the style guide will be read in automatically. 
+
+By default JSCS looks for a `.jscsrc` file in either the current working directory, or it looks up one level at a time until it finds one. So if you'd like JSCS to always use the same file, put it in your user profile.
 
 ## Formatting
 
@@ -60,6 +62,8 @@ Limit your lines to 80 characters. This is to maintain human readability, and to
 To improve human readability you should use spaces to indent your code. Different editors display tabs differently, and using tabs requires you to know what the indentation of a tab is going to look like, and require it to always be consistent. Therefore we will not use tabs. 2 spaces is preferred because it is quicker and leaves code more compressed horizontally. It is also very similar to the old days of using 2 spaces after a period, so that's neat.
 
 Save time and configure your editor to insert 2 spaces when you press the tab button to save you from having to press the space bar twice. Also configure auto indenting to use 2 spaces, and then you can adjust code quickly.
+
+For example, to set Atom to use 2 spaces instead of tabs, press `cmd + ,` and check `auto indent`, `soft tabs`, and set `tab length` to `2` and `tab type` to `soft`.
 
 ### Semicolons
 
