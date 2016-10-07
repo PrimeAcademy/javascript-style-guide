@@ -1,5 +1,4 @@
 {
-  "esnext": true,
   "requireCurlyBraces": true,
   "requireOperatorBeforeLineBreak": true,
   "requireCamelCaseOrUpperCaseIdentifiers": true,
