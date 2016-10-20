@@ -67,5 +67,6 @@
     "checkTypes": "capitalizedNativeCase",
     "checkRedundantAccess": true,
     "requireNewlineAfterDescription": true
-  }
+  },
+  safeContextKeyword: null
 }
